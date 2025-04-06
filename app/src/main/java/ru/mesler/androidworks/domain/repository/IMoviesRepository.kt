@@ -1,9 +1,10 @@
 package ru.mesler.androidworks.domain.repository
 
 import ru.mesler.androidworks.domain.model.Movie
+import ru.mesler.androidworks.domain.model.MovieShort
 
 interface IMoviesRepository {
-    fun getList(): List<Movie>
+    suspend fun getList(query: String): List<MovieShort>
 
-    fun getById(id: Int): Movie?
+    suspend fun getById(id: Int): Movie?
 }
