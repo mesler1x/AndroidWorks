@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId = "ru.mesler.androidworks"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
@@ -40,6 +40,11 @@ android {
 }
 
 dependencies {
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    implementation(libs.gson)
+    debugImplementation("com.github.chuckerteam.chucker:library:4.1.0")
+    releaseImplementation("com.github.chuckerteam.chucker:library-no-op:4.1.0")
     implementation(libs.material)
     implementation(libs.androidx.navigation.compose)
     implementation(libs.coil.compose)
