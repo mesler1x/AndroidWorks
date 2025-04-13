@@ -28,7 +28,7 @@ fun provideRetrofit(context: Context): Retrofit {
                     chain.proceed(
                         request.newBuilder()
                             .url(url)
-                            .addHeader("X-API-KEY", "KW79Y49-4NZ46JV-PYV9D9F-7RWHB5W")
+                            .addHeader("X-API-KEY", "72D2QKD-2DJM6Q6-G9PPXQW-96J5PC7")
                             .build()
                     )
                 }.intercept(it)
