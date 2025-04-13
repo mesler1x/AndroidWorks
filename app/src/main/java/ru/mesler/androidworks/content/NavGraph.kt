@@ -11,7 +11,7 @@ fun NavGraph(navController: NavHostController) {
         navController = navController,
         startDestination = "list"
     ) {
-        composable("profile") { ProfileScreen() }
+        composable("profile") { ProfileScreen(navController) }
         composable("list") { ListScreen(navController) }
         composable("details/{movieId}") { backStackEntry ->
             val movieId = backStackEntry.arguments?.getString("movieId")?.toInt() ?: 0

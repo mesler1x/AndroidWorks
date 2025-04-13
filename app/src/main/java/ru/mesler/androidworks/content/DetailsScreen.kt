@@ -120,7 +120,7 @@ private fun MovieScreenContent(
             LazyColumn {
                 items(movie.genres) { genre ->
                     Text(
-                        text = genre.name,
+                        text = genre.displayName,
                         style = Typography.bodyLarge,
                         modifier = Modifier.padding(horizontal = 14.dp)
                     )
@@ -139,7 +139,7 @@ private fun MovieScreenContent(
             LazyColumn {
                 items(movie.countries) { country ->
                     Text(
-                        text = country.name,
+                        text = country,
                         style = Typography.bodyLarge,
                         modifier = Modifier.padding(horizontal = 14.dp)
                     )

@@ -1,11 +1,8 @@
 package ru.mesler.androidworks.api.response
 
 import androidx.annotation.Keep
-import ru.mesler.androidworks.domain.model.Country
-import ru.mesler.androidworks.domain.model.Genre
 import ru.mesler.androidworks.domain.model.Person
 import ru.mesler.androidworks.domain.model.Poster
-import ru.mesler.androidworks.domain.model.Premiere
 import ru.mesler.androidworks.domain.model.Rating
 import ru.mesler.androidworks.domain.model.Votes
 
@@ -16,9 +13,24 @@ class MovieFullResponse(
     val rating: Rating?,
     val description: String?,
     val votes: Votes?,
-    val premiere: Premiere?,
+    val type: String,
+    val premiere: PremiereDto?,
     val poster: Poster?,
-    val genres: List<Genre>?,
-    val countries: List<Country>?,
+    val genres: List<GenreDto>?,
+    val countries: List<CountryDto>?,
     val persons: List<Person>?
-)
+) {
+
+
+    class PremiereDto(
+        val date: String
+    )
+
+    class GenreDto(
+        val name: String
+    )
+
+    class CountryDto(
+        val name: String
+    )
+}
