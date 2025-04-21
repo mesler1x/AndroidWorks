@@ -1,4 +1,4 @@
-package ru.mesler.androidworks.ui.theme
+package ru.mesler.androidworks.theme
 
 import androidx.compose.ui.graphics.Color
 
