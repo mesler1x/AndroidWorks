@@ -5,7 +5,7 @@ import androidx.room.Room
 import org.koin.dsl.module
 import ru.mesler.androidworks.data.MovieDatabase
 
-val dbModule = module {
+val dbMovieModule = module {
     single { DatabaseBuilder.getInstance(get()) }
 }
 

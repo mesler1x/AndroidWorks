@@ -9,7 +9,8 @@ import androidx.compose.material.BottomNavigation
 import androidx.compose.material.BottomNavigationItem
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.List
-import androidx.compose.material.icons.rounded.AccountCircle
+import androidx.compose.material.icons.filled.Person
+import androidx.compose.material.icons.rounded.Favorite
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Scaffold
@@ -59,19 +60,40 @@ fun MainActivityScreen() {
                     BottomNavigationItem(
                         icon = {
                             Icon(
-                                Icons.Rounded.AccountCircle,
-                                contentDescription = "Profile",
+                                Icons.Rounded.Favorite,
+                                contentDescription = "Favourites",
                                 tint = Color.White,
                                 modifier = Modifier.size(30.dp)
                             )
                         },
                         label = {
                             Text(
-                                text = "Мой Профиль",
+                                text = "Избранное",
                                 color = Color.White,
                                 style = Typography.labelSmall
                             )
 
+                        },
+                        selected = false,
+                        onClick = {
+                            navController.navigate("favourites")
+                        }
+                    )
+                    BottomNavigationItem(
+                        icon = {
+                            Icon(
+                                Icons.Filled.Person,
+                                contentDescription = "Профиль",
+                                tint = Color.White,
+                                modifier = Modifier.size(30.dp)
+                            )
+                        },
+                        label = {
+                            Text(
+                                text = "Профиль",
+                                color = Color.White,
+                                style = Typography.labelSmall
+                            )
                         },
                         selected = false,
                         onClick = {

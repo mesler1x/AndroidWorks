@@ -5,7 +5,8 @@ import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
 import ru.mesler.androidworks.api.restModule
-import ru.mesler.androidworks.di.dbModule
+import ru.mesler.androidworks.di.dbMovieModule
+import ru.mesler.androidworks.di.dbProfileModule
 import ru.mesler.androidworks.di.rootModule
 
 class App : Application() {
@@ -16,7 +17,7 @@ class App : Application() {
         startKoin {
             androidLogger()
             androidContext(this@App)
-            modules(rootModule, restModule, dbModule)
+            modules(rootModule, restModule, dbMovieModule, dbProfileModule)
         }
     }
 }
