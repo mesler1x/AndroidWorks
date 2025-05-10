@@ -8,4 +8,5 @@ interface ProfileState {
     val email: String
     val isLoading: Boolean
     val error: String?
+    val favoriteClassTime: String
 }

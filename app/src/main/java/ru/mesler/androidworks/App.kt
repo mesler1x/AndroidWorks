@@ -8,12 +8,13 @@ import ru.mesler.androidworks.api.restModule
 import ru.mesler.androidworks.di.dbMovieModule
 import ru.mesler.androidworks.di.dbProfileModule
 import ru.mesler.androidworks.di.rootModule
+import ru.mesler.androidworks.utils.NotificationUtils
 
 class App : Application() {
 
     override fun onCreate() {
         super.onCreate()
-
+        NotificationUtils.createNotificationChannel(this)
         startKoin {
             androidLogger()
             androidContext(this@App)

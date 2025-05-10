@@ -88,7 +88,9 @@ fun ProfileScreen(navigation: NavHostController) {
                 ProfileField("ФИО", state.fio)
                 ProfileField("Должность", state.position)
                 ProfileField("Email", state.email)
-
+                if (state.favoriteClassTime.isNotEmpty()) {
+                    ProfileField("Время любимой пары", state.favoriteClassTime)
+                }
                 if (state.resumeUrl.isNotEmpty()) {
                     Spacer(modifier = Modifier.height(16.dp))
                     Button(
